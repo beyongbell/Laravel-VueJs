@@ -1914,9 +1914,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {};
+    return {
+      name: 'Tinnakorn'
+    };
+  },
+  beforeCreate: function beforeCreate() {
+    console.log('beforeCreate', this.name);
+  },
+  created: function created() {
+    console.log('created', this.name);
+  },
+  mounted: function mounted() {
+    console.log('mounted', this.$refs.MyRef);
   }
 });
 
@@ -19625,16 +19637,13 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("h1", { ref: "MyRef" }, [_vm._v(" Hook tutorial ")]),
+    _vm._v(" "),
+    _c("p", [_vm._v(" My Name is " + _vm._s(_vm.name) + " ")])
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v(" Hook tutorial ")])])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
