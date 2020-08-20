@@ -4,8 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> Full Stack Blog </title>
+        <script src="{{ mix('js/app.js') }}" defer></script>
+        <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <h1> This is the body </h1>
+        <div id="app">
+            <app-component></app-component>
+        </div>
     </body>
 </html>
